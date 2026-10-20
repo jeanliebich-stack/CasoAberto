@@ -4,7 +4,7 @@ export const LEGACY_PLAYER_PROFILES_SCHEMA = 'dedektif-player-profiles/v1' as co
 export const LEGACY_PLAYER_PROFILES_STORAGE_KEY = 'dedektif:player-profiles:v1' as const
 export const LEGACY_PLAYER_PROFILE_ID = 'primary' as const
 
-export type PlayerPreferredLocale = 'tr' | 'en'
+export type PlayerPreferredLocale = 'tr' | 'en' | 'pt-BR'
 export type PlayerCaseLocale = string
 
 export interface PlayerProfile {
@@ -170,8 +170,8 @@ function displayName(value: unknown, code: PlayerProfileStoreErrorCode): string 
 }
 
 function preferredLocale(value: unknown, code: PlayerProfileStoreErrorCode): PlayerPreferredLocale {
-  if (value !== 'tr' && value !== 'en') {
-    throw storeError(code, "Player preferred locale must be either 'tr' or 'en'.")
+  if (value !== 'tr' && value !== 'en' && value !== 'pt-BR') {
+    throw storeError(code, "Player preferred locale must be 'tr', 'en' or 'pt-BR'.")
   }
   return value
 }

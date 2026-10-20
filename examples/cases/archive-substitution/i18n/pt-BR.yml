@@ -1,0 +1,9 @@
+schema: case-i18n/v0.1
+case: {id: examples.archive-substitution, version: 0.1.0}
+locale: pt-BR
+messages:
+  case.title: "O Retorno Oco"
+  case.synopsis: "Um fólio de mapa raro volta como um substituto convincente, enquanto o leitor citado no registro parece estar se preparando para partir de balsa."
+  opening.call: "O fólio de mapa AM-42 foi devolvido, mas o papel, a encadernação e a etiqueta de inventário não correspondem à imagem do nosso catálogo. O registro cita Eli Mercer, e a última balsa parte em quinze minutos. Você consegue identificar o leitor e encontrar o original antes da partida?"
+  outcomes.recovered.title: "Fólio Original Recuperado"
+  outcomes.departed.title: "A Balsa Partiu"

@@ -73,6 +73,16 @@ const LABELS: Readonly<Record<AppLocale, WebResearchLabels>> = {
     forward: 'Forward', newTab: 'New tab', secureConnection: 'Secure connection', toolbar: 'toolbar',
     resultCount: (count) => `${count} ${count === 1 ? 'result' : 'results'}`,
   },
+  'pt-BR': {
+    title: 'Safari', eyebrow: 'Sugestões de pesquisa', searchPlaceholder: 'Pesquise ou digite o nome do site',
+    search: 'Buscar', searching: 'Buscando…', results: 'Resultados da busca', noResults: 'Nenhum resultado encontrado para esta busca.',
+    noPage: 'Digite um assunto para pesquisar.', backToResults: 'Voltar aos resultados', save: 'Adicionar favorito',
+    saved: 'Remover favorito', openResult: 'Abrir resultado', startPage: 'Página Inicial',
+    favorites: 'Favoritos', suggestedSearches: 'Buscas Sugeridas', privacyReport: 'Relatório de Privacidade',
+    privacyMessage: 'O rastreamento entre sites está desativado nesta sessão de pesquisa privada.', sidebar: 'Barra lateral',
+    forward: 'Avançar', newTab: 'Nova aba', secureConnection: 'Conexão segura', toolbar: 'barra de ferramentas',
+    resultCount: (count) => `${count} ${count === 1 ? 'resultado' : 'resultados'}`,
+  },
 }
 
 const START_FAVORITES = {
@@ -87,6 +97,12 @@ const START_FAVORITES = {
     { icon: newspaperIcon, title: 'News Archive', detail: 'Local sources' },
     { icon: mapIcon, title: 'Maps', detail: 'Addresses and locations' },
     { icon: buildingIcon, title: 'Company Registry', detail: 'Business records' },
+  ],
+  'pt-BR': [
+    { icon: landmarkIcon, title: 'Registros Públicos', detail: 'Arquivos oficiais' },
+    { icon: newspaperIcon, title: 'Arquivo de Notícias', detail: 'Fontes locais' },
+    { icon: mapIcon, title: 'Mapas', detail: 'Endereços e locais' },
+    { icon: buildingIcon, title: 'Registro de Empresas', detail: 'Registros comerciais' },
   ],
 } as const satisfies Readonly<Record<AppLocale, readonly { icon: string; title: string; detail: string }[]>>
 

@@ -36,6 +36,16 @@ const LABELS: Readonly<Record<AppLocale, EvidenceQuestionsLabels>> = {
     noEvidence: 'No evidence yet.',
     noQuestions: 'No open questions.',
   },
+  'pt-BR': {
+    evidence: 'Evidências',
+    questions: 'Perguntas',
+    observed: 'Analisada',
+    available: 'Nova',
+    open: 'Em aberto',
+    answered: 'Respondida',
+    noEvidence: 'Nenhuma evidência ainda.',
+    noQuestions: 'Nenhuma pergunta em aberto.',
+  },
 }
 
 export interface EvidenceQuestionsRailProps {

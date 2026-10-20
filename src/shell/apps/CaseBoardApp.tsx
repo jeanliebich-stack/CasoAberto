@@ -89,6 +89,18 @@ const LABELS: Readonly<Record<AppLocale, CaseBoardLabels>> = {
     chooseSecondPin: (pin) => `${pin} selected. Select the second pin.`,
     removeConnection: (from, to) => `Remove the connection between ${from} and ${to}`,
   },
+  'pt-BR': {
+    appName: 'Quadro do Caso', eyebrow: 'Área de trabalho', description: 'Organize pessoas e evidências visuais com as suas próprias conexões.',
+    instructions: 'Arraste os cartões. Selecione dois alfinetes em sequência para traçar um fio vermelho.', people: 'Pessoas', evidence: 'Imagens',
+    connections: 'Conexões', emptyTitle: 'O quadro está vazio', emptyBody: 'Novas pessoas e evidências visuais aparecerão aqui conforme você as descobrir.',
+    connectPin: 'Selecione o alfinete para conectar', selectedPin: 'Alfinete selecionado', cancelSelection: 'Limpar seleção',
+    clearConnections: 'Remover todas as conexões', openEvidence: 'Ampliar evidência', unavailableImage: 'Sem pré-visualização da imagem',
+    connectionAdded: 'Fio vermelho adicionado.', connectionRemoved: 'Fio vermelho removido.',
+    connectionRemovedDirectly: 'Conexão removida do quadro.', moveHint: 'Você também pode mover o cartão com as setas do teclado.',
+    personCard: 'FICHA DA PESSOA', boardSummary: 'Resumo do quadro',
+    chooseSecondPin: (pin) => `${pin} selecionado. Selecione o segundo alfinete.`,
+    removeConnection: (from, to) => `Remover a conexão entre ${from} e ${to}`,
+  },
 }
 
 export interface CaseBoardAppProps {

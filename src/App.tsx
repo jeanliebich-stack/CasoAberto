@@ -437,6 +437,119 @@ const APP_COPY: Readonly<Record<AppLocale, AppCopy>> = {
     },
     commandErrorFallback: 'This action cannot be taken right now.',
   },
+  'pt-BR': {
+    newEvidence: 'Nova evidência',
+    evidence: 'Evidências',
+    evidenceAdded: (title) => `${title} foi adicionado ao Finder.`,
+    evidenceAddedMany: (count) => `${count} novos registros de evidência foram adicionados ao Finder.`,
+    dispatchReady: 'Uma nova aprovação está aguardando em Ações do Caso.',
+    dispatchReadyMany: (count) => `${count} novas aprovações estão aguardando em Ações do Caso.`,
+    contactResearchReady: 'Uma nova pesquisa de contato está pronta em Notas do Caso.',
+    contactResearchReadyMany: (count) => `${count} novas pesquisas de contato estão prontas em Notas do Caso.`,
+    evidenceInspected: (title) => `${title} foi analisado. As conclusões foram adicionadas às Notas do Caso.`,
+    deductionVerified: 'A dedução foi confirmada com evidências.',
+    actionCompleted: 'Ação concluída. Novas informações foram adicionadas às Notas do Caso.',
+    actionFailed: 'Não foi possível concluir a ação. Tente novamente.',
+    actionUnavailable: 'Esta ação não está mais disponível.',
+    dispatchCompleted: 'A ação foi enviada. O resultado foi salvo no dossiê do caso.',
+    activeCallFirst: 'Termine a ligação atual primeiro.',
+    lineBusy: 'A linha está ocupada com outra ação. Ligue de novo em instantes.',
+    callFailed: 'Não foi possível completar a ligação. Verifique a conexão e tente novamente.',
+    contactUnavailable: 'Esta pessoa não está mais nos contatos do telefone.',
+    conversation: 'Ligação',
+    callCompleted: 'Ligação concluída. Novas informações foram adicionadas às notas do caso.',
+    noAdditionalFinding: 'O registro foi verificado; não há outras conclusões.',
+    forensicsReviewComplete: (title, detail) => `Análise concluída de “${title}”. ${detail}`,
+    forensicsReviewRequest: (lead, title) => `${lead}, você pode analisar “${title}”? Verifique o conteúdo visível e quaisquer detalhes importantes.`,
+    newPerson: 'Nova pessoa',
+    forensicsReviewNotice: (title, lead) => `A análise de ${title} foi concluída. ${lead} compartilhou as conclusões.`,
+    forensicsRequestNotice: (subject, lead) => `${subject} concluído. ${lead} enviou uma resposta.`,
+    forensicsReviewFailed: 'Não consegui concluir a análise. Você pode enviar o registro de novo?',
+    forensicsRequestFailed: 'Não consegui concluir o pedido. Você pode enviar a pergunta de novo?',
+    recordUnavailable: 'Este registro não está mais disponível.',
+    recordAlreadyReviewed: 'Este registro já foi analisado.',
+    forensicsCompletingReview: (lead) => `${lead} está terminando a análise atual.`,
+    sentForReview: (title, lead) => `${title} foi enviado para ${lead} analisar.`,
+    researchUnavailable: 'Este pedido de pesquisa não está mais disponível.',
+    forensicsCompletingRequest: (lead) => `${lead} está terminando o pedido atual.`,
+    investigationRequest: 'Pedido de investigação',
+    requestSent: (subject, lead) => `${subject} foi enviado para ${lead}.`,
+    noRequests: 'Nenhum pedido ainda.',
+    forensicReview: 'Análise pericial',
+    now: 'Agora',
+    typing: 'digitando',
+    detective: 'Detetive',
+    investigatorRole: 'Investigador responsável',
+    system: 'Sistema',
+    contactAdded: (name) => `${name} foi adicionado(a) aos Contatos.`,
+    openContact: (name) => `Abrir ${name} no iPhone`,
+    openContactAccessible: (name) => `Abrir o cartão de contato de ${name} no iPhone`,
+    bureau: 'Departamento OpenCase',
+    forensicsLeadRole: 'Equipe interna · Chefe da perícia',
+    askLead: 'Perguntar à Ece',
+    caseDeskTopic: 'Caso ativo, anotações de campo e atualizações de tarefas',
+    forensicsTopic: 'Análises de evidências e pedidos de investigação',
+    operations: 'operacoes',
+    operationsTopic: 'Coordenação de campo',
+    evidenceChain: 'cadeia-de-custodia',
+    evidenceChainTopic: 'Transferência de evidências e registros de custódia',
+    shiftHandoff: 'passagem-de-turno',
+    shiftHandoffTopic: 'Notas do turno e trabalho em aberto',
+    officeManagement: 'administracao',
+    officeManagementTopic: 'Comunicados da equipe interna',
+    casebookApp: 'Notas do Caso',
+    caseBoardApp: 'Quadro do Caso',
+    dispatchApp: 'Ações do Caso',
+    inboxApp: 'Caixa de Entrada',
+    evidenceRailApp: 'Evidências / Perguntas',
+    deductionUnavailable: 'Esta dedução não pode mais ser avaliada.',
+    searchUnavailable: 'Não há um caminho verificado para esta busca. Use uma das pesquisas sugeridas.',
+    desktopAria: (title) => `Mesa de trabalho do detetive: ${title}`,
+    finalSubmission: 'Entrega final do caso',
+    caseAction: 'Ação do caso',
+    finalDecision: 'Decisão final',
+    consequentialAction: 'Ação com consequências',
+    confirmAction: 'Deseja tomar esta ação?',
+    actionConsequence: 'Esta ação pode mudar permanentemente o rumo da investigação.',
+    duration: (minutes) => `Leva ${minutes} min`,
+    cancel: 'Cancelar',
+    submitFinalReport: 'Enviar relatório final',
+    approveAndSend: 'Aprovar e enviar',
+    takeAction: 'Tomar ação',
+    inspectDesktop: 'Revisar a mesa',
+    playAgain: 'Jogar novamente',
+    newInvestigation: 'Nova investigação',
+    restartTitle: 'Deseja reiniciar este caso?',
+    restartDescription: 'Observações, deduções, ligações, o tempo decorrido e a disposição da mesa deste caso serão apagados.',
+    eraseAndRestart: 'Apagar e reiniciar',
+    unknownCaller: 'Chamador desconhecido',
+    caseLiaison: 'Contato do caso',
+    secureCaseLine: 'Linha Segura do Caso',
+    incomingCall: 'Chamada Recebida',
+    newCaseCall: 'Nova chamada de caso',
+    incomingCallAria: (title) => `Chamada de caso recebida: ${title}`,
+    bootFailed: 'Não foi possível abrir a mesa do caso',
+    bootPreparing: 'Preparando a mesa segura',
+    bootFailureDetail: 'Não foi possível carregar os arquivos do caso. Atualize a página e tente novamente.',
+    loading: 'Carregando',
+    connectionFailed: 'Não foi possível conectar. Atualize a página e tente novamente.',
+    caseStartFailed: 'Não foi possível iniciar o caso. Tente novamente.',
+    caseResetFailed: 'Não foi possível reiniciar o caso. Tente novamente.',
+    commandErrors: {
+      'evidence-locked': 'Você ainda não tem acesso a esta evidência. Siga primeiro as pistas disponíveis.',
+      'evidence-already-observed': 'Esta evidência já foi analisada.',
+      'evidence-not-observed': 'Analise a evidência relacionada antes de tomar esta ação.',
+      'deduction-unproven': 'Ainda não há evidências suficientes para esta dedução.',
+      'deduction-requires-support': 'Conclua primeiro as deduções anteriores.',
+      'deduction-already-supported': 'Esta dedução já foi confirmada.',
+      'actor-unavailable': 'Esta pessoa não está disponível para conversar agora.',
+      'affordance-unavailable': 'Esta oportunidade não está mais disponível. Confira as pistas atuais.',
+      'affordance-command-mismatch': 'Esta ação não pode ser feita desta forma agora.',
+      'final-conclusion-locked': 'A decisão final deste caso já foi tomada.',
+      'case-ended': 'Este caso está encerrado. Não é possível tomar novas ações.',
+    },
+    commandErrorFallback: 'Esta ação não pode ser feita agora.',
+  },
 }
 
 function desktopLayoutKey(
@@ -687,36 +800,45 @@ function importFailureCopy(locale: PlayerPreferredLocale, error: unknown): {
 } {
   const fallback = locale === 'tr'
     ? 'Vaka eklenemedi. Bağlantıyı ve vaka dosyasını kontrol et.'
-    : 'The case could not be added. Check the link and case files.'
+    : locale === 'pt-BR'
+      ? 'Não foi possível adicionar o caso. Verifique o link e os arquivos do caso.'
+      : 'The case could not be added. Check the link and case files.'
   if (!(error instanceof CaseLibraryClientError)) return { message: fallback }
-  const known: Readonly<Record<string, readonly [string, string]>> = {
+  const known: Readonly<Record<string, readonly [string, string, string]>> = {
     'case-tests-failed': [
       'Vakanın kendi testlerinden biri başarısız oldu.',
       'One or more authored case tests failed.',
+      'Um ou mais testes do próprio caso falharam.',
     ],
     'case-validation-failed': [
       'Vaka dosyaları opencase formatına uymuyor.',
       'The case files do not match the opencase format.',
+      'Os arquivos do caso não seguem o formato do opencase.',
     ],
     'direct-yaml-assets-unsupported': [
       'Tek YAML bağlantıları varlık içeremez. Görsel veya ses için GitHub klasörü kullan.',
       'Direct YAML cannot include assets. Use a GitHub folder for images or audio.',
+      'Um YAML direto não pode incluir recursos. Use uma pasta do GitHub para imagens ou áudio.',
     ],
     'direct-yaml-i18n-unsupported': [
       'Tek YAML bağlantısında çeviri anahtarları kullanılamaz. Metinleri doğrudan YAML içine yaz.',
       'Direct YAML cannot use translation keys. Put literal text in the YAML file.',
+      'Um YAML direto não pode usar chaves de tradução. Escreva o texto literal no próprio arquivo YAML.',
     ],
     'github-case-not-found': [
       'GitHub bağlantısında bir case.yml bulunamadı.',
       'No case.yml was found at the GitHub URL.',
+      'Nenhum case.yml foi encontrado no link do GitHub.',
     ],
     'case-version-conflict': [
       'Bu vaka sürümü farklı içerikle zaten yüklü.',
       'This case version is already installed with different content.',
+      'Esta versão do caso já está instalada com conteúdo diferente.',
     ],
     'unsafe-import-url': [
       'Yalnızca herkese açık ve güvenli HTTPS bağlantıları kullanılabilir.',
       'Only public, safe HTTPS links can be imported.',
+      'Só é possível importar links HTTPS públicos e seguros.',
     ],
   }
   const copy = known[error.code]
@@ -724,7 +846,7 @@ function importFailureCopy(locale: PlayerPreferredLocale, error: unknown): {
     .map((diagnostic) => [diagnostic.path, diagnostic.message].filter(Boolean).join(': '))
     .join('\n')
   return {
-    message: copy ? copy[locale === 'tr' ? 0 : 1] : error.message || fallback,
+    message: copy ? copy[locale === 'tr' ? 0 : locale === 'pt-BR' ? 2 : 1] : error.message || fallback,
     ...(details ? { details } : {}),
   }
 }
@@ -2486,7 +2608,7 @@ export default function App() {
   const [profileStore] = useState<PlayerProfileStore>(() => {
     const defaultLocale = detectBrowserLocale()
     return createPlayerProfileStore({
-      defaultDisplayName: defaultLocale === 'tr' ? 'Dedektif' : 'Detective',
+      defaultDisplayName: defaultLocale === 'tr' ? 'Dedektif' : defaultLocale === 'pt-BR' ? 'Detetive' : 'Detective',
       defaultLocale,
     })
   })

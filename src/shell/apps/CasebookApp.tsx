@@ -67,6 +67,17 @@ const LABELS: Readonly<Record<AppLocale, CasebookLabels>> = {
     openSteps: (count) => `${count} open ${count === 1 ? 'step' : 'steps'}`,
     leadHint: 'Select a step to open the related app.',
   },
+  'pt-BR': {
+    title: 'Notas do Caso', eyebrow: 'Notas do Caso', notes: 'Anotações', deductions: 'Deduções',
+    emptyNotes: 'Nenhuma anotação de campo ainda.', emptyDeductions: 'Nenhuma dedução para avaliar ainda.',
+    ready: 'Pronta', supported: 'Confirmada', waiting: 'Faltam evidências', result: 'Resultado',
+    testDeduction: 'Avaliar', openEvidence: 'Abrir evidência', leads: 'Próximos passos', openLead: 'Abrir app',
+    contactActions: 'Pesquisa de contatos', contactActionsHint: 'Conexão com a perícia', contactActionReady: 'Pesquisar',
+    contactActionPending: 'Pesquisando', contactActionCompleted: 'Adicionado aos contatos', calls: 'Ligações', browser: 'Safari',
+    files: 'Finder', teamSpace: 'Espaço da Equipe', casePlan: 'Plano do caso',
+    openSteps: (count) => `${count} ${count === 1 ? 'passo em aberto' : 'passos em aberto'}`,
+    leadHint: 'Selecione um passo para abrir o app relacionado.',
+  },
 }
 
 export interface CasebookAppProps {

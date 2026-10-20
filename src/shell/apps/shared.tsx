@@ -57,6 +57,7 @@ export function AssetGlyph({ kind }: { readonly kind: AssetKind }) {
 const ASSET_GLYPHS: Readonly<Record<AppLocale, Record<AssetKind, string>>> = {
   tr: { image: 'GÖR', audio: 'SES', video: 'VİD', document: 'BLG', file: 'DOS' },
   en: { image: 'IMG', audio: 'AUD', video: 'VID', document: 'DOC', file: 'FILE' },
+  'pt-BR': { image: 'IMG', audio: 'ÁUD', video: 'VÍD', document: 'DOC', file: 'ARQ' },
 }
 
 interface SharedCopy {
@@ -78,6 +79,12 @@ const SHARED_COPY: Readonly<Record<AppLocale, SharedCopy>> = {
     noPreview: 'No preview',
     nextMoves: 'Next moves',
     assetKinds: { image: 'Image', audio: 'Audio recording', video: 'Video', document: 'Document', file: 'File' },
+  },
+  'pt-BR': {
+    open: 'Abrir',
+    noPreview: 'Sem pré-visualização',
+    nextMoves: 'Próximos passos',
+    assetKinds: { image: 'Imagem', audio: 'Gravação de áudio', video: 'Vídeo', document: 'Documento', file: 'Arquivo' },
   },
 }
 

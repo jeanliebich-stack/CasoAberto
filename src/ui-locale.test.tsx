@@ -4,7 +4,7 @@ import { act } from 'react'
 import { createRoot } from 'react-dom/client'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 
-import { detectBrowserLocale, UiLocaleProvider } from './ui-locale'
+import { detectBrowserLocale, localeTag, UiLocaleProvider } from './ui-locale'
 
 ;(globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true
 
@@ -40,6 +40,15 @@ describe('UiLocaleProvider', () => {
     expect(detectBrowserLocale(['fr-FR', 'en-GB'])).toBe('en')
     expect(detectBrowserLocale(['fr-FR', 'TR-cy'])).toBe('tr')
     expect(detectBrowserLocale(['  en_US  '])).toBe('en')
+  })
+
+  it('selects Brazilian Portuguese for any Portuguese browser preference', () => {
+    expect(detectBrowserLocale(['pt-BR', 'en-US'])).toBe('pt-BR')
+    expect(detectBrowserLocale(['fr-FR', 'pt-PT'])).toBe('pt-BR')
+    expect(detectBrowserLocale(['  PT_br  '])).toBe('pt-BR')
+    expect(localeTag('pt-BR')).toBe('pt-BR')
+    expect(localeTag('tr')).toBe('tr-TR')
+    expect(localeTag('en')).toBe('en-US')
   })
 
   it('falls back to English when no browser language is supported', () => {

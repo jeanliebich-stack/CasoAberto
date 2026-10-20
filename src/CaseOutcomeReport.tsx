@@ -92,6 +92,22 @@ const COPY: Readonly<Record<AppLocale, OutcomeCopy>> = {
     points: 'points',
     empty: 'Detailed approach notes are not available for this outcome.',
   },
+  'pt-BR': {
+    closedTitle: 'Caso encerrado',
+    closedBody: 'A investigação terminou. Você pode rever os registros no caderno do caso.',
+    outcome: 'Desfecho do caso',
+    methodScore: 'Nota do método',
+    investigationAssessment: 'Avaliação da investigação',
+    approachReport: 'Relatório de abordagem',
+    reportDescription: 'Como as suas decisões afetaram as evidências, o processo e as pessoas envolvidas no caso.',
+    categoryFallback: (index) => `Área de avaliação ${index + 1}`,
+    detailCount: (count) => `${count} ${count === 1 ? 'avaliação' : 'avaliações'}`,
+    detailFallback: 'Não há nota de avaliação disponível para este critério.',
+    met: 'Atendido',
+    improvable: 'Pode melhorar',
+    points: 'pontos',
+    empty: 'As notas detalhadas de abordagem não estão disponíveis para este desfecho.',
+  },
 }
 
 function categoryLabel(category: CaseOutcomeAssessmentCategory, index: number, copy: OutcomeCopy): string {

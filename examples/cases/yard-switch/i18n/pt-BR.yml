@@ -1,0 +1,9 @@
+schema: case-i18n/v0.1
+case: {id: examples.yard-switch, version: 0.1.1}
+locale: pt-BR
+messages:
+  case.title: "Desvio do Pátio"
+  case.synopsis: "Uma locomotiva entrou em um desvio de serviço ocupado antes de a autorização de rota ser emitida. Concilie os relógios, a posição da chave e a ordem de rádio antes que o gravador sobrescreva os dados."
+  opening.call: "A locomotiva 406 parou rente aos equipamentos no Desvio de Serviço C-4. A chave de campo, o gravador e os relógios de autorização não concordam, e a exportação do gravador será sobrescrita em cinco minutos de caso. Preserve-a e reconstrua a ordem."
+  outcomes.record_overwritten.title: "Gravador sobrescrito"
+  outcomes.sequence_reconstructed.title: "Sequência reconstruída"

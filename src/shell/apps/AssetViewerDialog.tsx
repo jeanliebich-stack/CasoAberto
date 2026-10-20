@@ -52,6 +52,17 @@ const COPY: Readonly<Record<AppLocale, AssetViewerCopy>> = {
     retry: 'Close the preview and try again.',
     download: 'Download file',
   },
+  'pt-BR': {
+    kinds: { image: 'Imagem', audio: 'Áudio', video: 'Vídeo', document: 'Documento', file: 'Arquivo' },
+    description: (kind) => `Pré-visualização segura do caso: ${kind.toLocaleLowerCase('pt-BR')}.`,
+    close: 'Fechar',
+    evidencePreview: 'Pré-visualização da evidência',
+    opening: 'Abrindo arquivo…',
+    preparing: 'Preparando a pré-visualização segura.',
+    failed: 'Não foi possível abrir o arquivo.',
+    retry: 'Feche a pré-visualização e tente novamente.',
+    download: 'Baixar arquivo',
+  },
 }
 
 export function AssetViewerDialog({ asset, onClose }: AssetViewerDialogProps) {

@@ -89,6 +89,18 @@ const LABELS: Readonly<Record<AppLocale, FilesLabels>> = {
     recordActions: 'Record actions', finderSidebar: 'Finder sidebar', noPreview: 'No preview',
     assetKinds: { image: 'Image', audio: 'Audio recording', video: 'Video', document: 'Document', file: 'File' },
   },
+  'pt-BR': {
+    title: 'Finder', eyebrow: 'Arquivo do caso', files: 'Evidências', noFiles: 'Nenhuma evidência nesta pasta ainda.',
+    noSearchResults: 'Nenhum arquivo corresponde à busca.', selectFile: 'Selecione um arquivo para visualizá-lo.',
+    new: 'Nova', observed: 'Analisada', inspect: 'Solicitar análise', openAsset: 'Abrir', details: 'Informações da evidência',
+    favorites: 'Favoritos', locations: 'Locais', tags: 'Etiquetas', recents: 'Recentes', caseArchive: 'Arquivo do Caso',
+    computer: 'Mac do Detetive', search: 'Buscar evidências', nameColumn: 'Nome', kindColumn: 'Tipo',
+    receivedColumn: 'Adicionado', statusColumn: 'Situação', preview: 'Pré-visualização', findings: 'Conclusões da análise',
+    information: 'Informações', quickActions: 'Ações rápidas', item: 'item',
+    itemCount: (count) => `${count} ${count === 1 ? 'item' : 'itens'}`, detective: 'Detetive', listView: 'Visualização em lista',
+    recordActions: 'Ações do registro', finderSidebar: 'Barra lateral do Finder', noPreview: 'Sem pré-visualização',
+    assetKinds: { image: 'Imagem', audio: 'Gravação de áudio', video: 'Vídeo', document: 'Documento', file: 'Arquivo' },
+  },
 }
 
 export interface FilesAppProps {

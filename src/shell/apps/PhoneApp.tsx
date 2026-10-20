@@ -150,6 +150,26 @@ const LABELS: Readonly<Record<AppLocale, PhoneLabels>> = {
     searchContacts: 'Search contacts', search: 'Search', callFilter: 'Call filter', all: 'All', openContact: 'Open contact.',
     bottomNavigation: 'Bottom navigation', returnHome: 'Return to Home Screen',
   },
+  'pt-BR': {
+    title: 'iPhone do Detetive', eyebrow: 'Linha de campo', contacts: 'Contatos', recentCalls: 'Recentes', call: 'Ligar',
+    message: 'Mensagem', endCall: 'Encerrar ligação', available: 'Disponível', unavailable: 'Indisponível no momento',
+    noContacts: 'Nenhum contato ainda.', noCalls: 'Nenhuma ligação ainda.', incoming: 'Recebida', outgoing: 'Realizada', missed: 'Perdida',
+    incomingCall: 'Chamada de caso recebida', connected: 'Linha segura conectada', answer: 'Atender', decline: 'Recusar',
+    returnCall: 'Retornar ligação', beginCase: 'Aceitar caso', briefing: 'Nota da chamada', noActions: 'Não há nada a fazer agora.',
+    phoneNumber: 'Telefone', operator: 'Operadora', source: 'Origem', newlyAdded: 'Recém-adicionado', dialing: 'Chamando…',
+    speaking: 'Ligação em andamento', ending: 'Encerrando a ligação', callEnded: 'Ligação encerrada', callResult: 'Notas da ligação', closeResult: 'Concluir',
+    secureLine: 'Marmara · linha segura', resultFallback: 'Ligação concluída. Novas informações foram adicionadas às notas do caso.',
+    detective: 'Detetive', autoComplete: 'A ligação terminará automaticamente', voiceConnecting: 'Conectando', voiceLive: 'Áudio ao vivo',
+    voiceClosing: 'Encerrando a linha', networkConnected: 'Conectado à rede móvel Marmara', caseClock: (time) => `Hora do caso ${time}`,
+    lineActions: 'Ações da linha', caseLine: 'Linha do Caso', actionsReady: (count) => `${count} ${count === 1 ? 'ação pronta' : 'ações prontas'}`,
+    secureAction: 'Pela linha segura', homeDate: 'Terça-feira, 25 de agosto', now: 'agora', waitingAction: 'Uma nova ação está esperando por você',
+    quickContact: 'CONTATO RÁPIDO', apps: 'Apps', calls: 'Ligações', messages: 'Mensagens',
+    newActions: (count) => `${count} ${count === 1 ? 'nova ação' : 'novas ações'}`, favoriteApps: 'Apps favoritos',
+    openCalls: 'Abrir ligações', openContacts: 'Abrir contatos', openMessages: 'Abrir mensagens', mute: 'Silenciar', keypad: 'Teclado',
+    speaker: 'Alto-falante', callNotes: 'Notas da ligação', liveCallNotes: 'Notas da ligação ao vivo', homeScreen: 'Tela de Início',
+    searchContacts: 'Buscar contatos', search: 'Buscar', callFilter: 'Filtro de ligações', all: 'Todas', openContact: 'Abrir contato.',
+    bottomNavigation: 'Navegação inferior', returnHome: 'Voltar à Tela de Início',
+  },
 }
 
 export interface PhoneAppProps {

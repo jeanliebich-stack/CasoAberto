@@ -1,0 +1,8 @@
+schema: case-i18n/v0.1
+case: {id: examples.olive-oil-lot, version: 0.1.1}
+locale: pt-BR
+messages:
+  case.title: "O Lote de Azeite"
+  case.synopsis: "Uma amostra lacrada de azeite premium não corresponde ao perfil declarado. Autentique a amostra, concilie os volumes do lote e rastreie o material não declarado pelos registros de produção."
+  opening.call: "A amostra de varejo RL-204-A traz a nossa alegação premium, mas a cor e o aroma dela geraram um alerta de qualidade. O lacre está intacto. Por favor, obtenha o laudo de autenticidade e rastreie cada insumo antes de culparmos o rótulo ou a linha de envase."
+  outcomes.traced_dilution.title: "Diluição rastreada até o tanque de mistura"

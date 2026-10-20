@@ -66,6 +66,28 @@ const COPY = {
     consequentialEyebrow: 'Official request', consequentialConsequence: 'The operation will be sent to the relevant authority for review.', consequentialImpact: 'Added to the case record',
     normalEyebrow: 'Case operation', normalConsequence: 'Operation details are shown on the review screen.', normalImpact: 'Saved to the case file',
   },
+  'pt-BR': {
+    title: 'Operações do Caso', approvalAndSubmission: 'Aprovação e envio', secureWorkspace: 'Ambiente seguro',
+    file: 'CASO', operations: 'OPERAÇÕES', fileInfo: 'Informações do caso', fileNumber: 'Número do caso', newFile: 'Novo dossiê do caso',
+    fileUnit: 'Unidade do Caso', fileSections: 'Seções do caso', pendingOperations: 'Operações pendentes', evidenceSummary: 'Resumo das evidências',
+    evidenceCount: (count: number) => `Quantidade de evidências: ${count}`, submissionHistory: 'Histórico de envios', fileStatus: 'Situação do caso',
+    pendingApproval: 'AGUARDANDO APROVAÇÃO', approvalDocument: 'Documento de aprovação e envio', number: 'Número', record: 'Registro',
+    notRecorded: 'Ainda não registrado', status: 'Situação', subject: 'Assunto', eventAndAssessment: 'Fato e avaliação',
+    caseSummary: 'Resumo do caso', evidenceIndex: 'Índice de evidências e avaliação',
+    evidenceIntro: (total: number, observed: number, decisive: number) => `${observed} de ${total} registros anexados ao caso foram analisados. ${decisive} ${decisive === 1 ? 'resultado foi confirmado' : 'resultados foram confirmados'} com as evidências disponíveis.`,
+    reviewStatus: 'Situação da análise das evidências', reviewedPercent: (value: number) => `${value}% analisado`, attachmentsCaption: 'Anexos e registros de evidências',
+    order: 'Nº', source: 'Origem', indexed: 'Indexado', evidenceRecords: 'Registros de evidências', attachmentCount: (count: number) => `${count} ${count === 1 ? 'anexo' : 'anexos'}`,
+    reviewedCount: (count: number) => `${count} ${count === 1 ? 'analisado' : 'analisados'}`, verifiedCountLabel: 'Quantidade de resultados confirmados',
+    verifiedResults: (count: number) => `${count} ${count === 1 ? 'resultado confirmado' : 'resultados confirmados'}`, supportedByEvidence: 'Sustentado pelas evidências do dossiê do caso.',
+    submissionInfo: 'Informações do envio', preparingUnit: 'Unidade preparadora', receivingUnit: 'Unidade receptora', relevantUnit: 'Unidade Competente',
+    approvalInfo: 'Informações da aprovação', approvalStatus: 'Situação da aprovação', workingDocument: 'documento de trabalho', approvalSection: '04 · Aprovação',
+    operationsSaved: 'As operações são salvas no dossiê do caso', actionResult: 'Resultado da ação', review: 'Revisar',
+    noPending: 'Não há operações aguardando aprovação.', noPendingHint: 'Novas operações aparecerão aqui quando estiverem prontas.', preparing: 'Preparando a operação',
+    draftStamp: 'RASCUNHO DE TRABALHO', pendingStamp: 'AGUARDANDO APROVAÇÃO', closedStamp: 'CASO ENCERRADO',
+    terminalEyebrow: 'Encerramento do caso', terminalConsequence: 'Ao enviar, o trabalho no dossiê do caso é concluído.', terminalImpact: 'Encerra este dossiê do caso',
+    consequentialEyebrow: 'Solicitação oficial', consequentialConsequence: 'A operação será enviada à autoridade competente para análise.', consequentialImpact: 'Adicionado ao registro do caso',
+    normalEyebrow: 'Operação do caso', normalConsequence: 'Os detalhes da operação são exibidos na tela de revisão.', normalImpact: 'Salvo no dossiê do caso',
+  },
 } as const satisfies Readonly<Record<AppLocale, object>>
 
 type CaseDispatchCopy = (typeof COPY)[AppLocale]

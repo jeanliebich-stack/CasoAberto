@@ -44,7 +44,7 @@ base language, then the case's `case.locale` default. Changing presentation
 copy does not append an event or modify a save.
 
 For a brand-new browser profile, the application checks `navigator.languages`
-in preference order and selects the first supported `tr` or `en` base language.
+in preference order and selects the first supported `tr`, `en` or `pt` (Brazilian Portuguese, `pt-BR`) base language.
 It uses `navigator.language` when the ordered list is unavailable. English is
 the fallback when the browser preference is unavailable or none of its
 languages are supported. The detected choice is stored in the new profile.
@@ -76,7 +76,7 @@ against inspection of downloaded static files.
 
 | Owner | Browser data | Exact scope |
 | --- | --- | --- |
-| Profile application | Profile ID, display name, `tr`/`en` preference, selected case | Browser-local profile record |
+| Profile application | Profile ID, display name, `tr`/`en`/`pt-BR` preference, selected case | Browser-local profile record |
 | Browser session adapter | Opaque serialized `kernel-save@1` string | Profile/save ID + case ID + case version + kernel IR digest |
 | Shell applications | Window layout, case-board positions and links, pending presentation state | Profile and case/run where applicable |
 | Browser case library | Imported compiled runtime bundles, localized manifests, source metadata, verification result | Immutable case ID + version + content identity |

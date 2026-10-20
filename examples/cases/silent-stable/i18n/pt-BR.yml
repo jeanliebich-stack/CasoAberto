@@ -1,0 +1,11 @@
+schema: case-i18n/v0.1
+case: {id: examples.silent-stable, version: 0.1.0}
+locale: pt-BR
+messages:
+  case.title: "O Estábulo Silencioso"
+  case.synopsis: "Um cavalo de treino sai de um estábulo trancado sem acionar o monitor do cão de guarda. Diferencie um visitante conhecido do motorista de entregas antes que o rastro do transporte volte a andar."
+  opening.call: "O Comet sumiu. Uma van de entregas foi vista na estrada leste, mas o monitor do canil não registrou latidos nem queda de energia. Estou enviando o resumo do monitor e a planta do estábulo. O rastro do transporte pode se perder em doze minutos."
+  outcomes.safe_recovery.title: "A Salvo em East Ridge"
+  outcomes.right_person_wrong_story.title: "Pessoa Certa, Tarde Demais"
+  outcomes.trail_moved.title: "O Rastro Segue Adiante"
+  outcomes.wrong_driver.title: "A Van Conveniente"

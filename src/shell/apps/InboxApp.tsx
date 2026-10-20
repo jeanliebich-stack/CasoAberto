@@ -94,6 +94,18 @@ const LABELS: Readonly<Record<AppLocale, InboxLabels>> = {
     secureWorkspace: (name) => `Secure workspace with ${name}.`, typing: () => 'is typing',
     forensicsPlaceholder: 'Send a message to #forensics',
   },
+  'pt-BR': {
+    title: 'Equipe de Detetives', eyebrow: 'Espaço seguro da equipe', threads: 'Canais e mensagens', unread: 'Não lidas',
+    noThreads: 'A caixa de entrada está vazia.', noThreadSelected: 'Selecione uma conversa para lê-la.', replyPlaceholder: 'Escreva uma resposta…',
+    reply: 'Enviar', sending: 'Enviando…', openAttachment: 'Abrir anexo', imageAttachmentMeta: 'Anexo de imagem · Registro de análise',
+    quickPrompts: 'Pergunte à equipe', quickPromptsHint: 'Pesquisas em aberto neste caso', ask: 'Perguntar', waiting: 'Aguardando resposta',
+    searchWorkspace: 'Buscar no espaço de trabalho', searchIn: (workspace) => `Buscar em ${workspace}`, mainMenu: 'Menu principal',
+    home: 'Início', activity: 'Atividade', mentions: 'Menções', files: 'Arquivos', detectiveOnline: 'Detetive on-line',
+    investigationDesk: 'Mesa de investigação', inbox: 'Caixa de Entrada', channels: 'Canais', privateChannel: 'canal privado',
+    directMessages: 'Mensagens diretas', messages: 'Mensagens', forensicsTeam: 'Equipe de perícia',
+    secureWorkspace: (name) => `Espaço de trabalho seguro com ${name}.`, typing: () => 'está digitando',
+    forensicsPlaceholder: 'Enviar mensagem para #forensics',
+  },
 }
 
 const DEFAULT_CHANNELS: Readonly<Record<AppLocale, readonly InboxChannelViewModel[]>> = {
@@ -106,6 +118,11 @@ const DEFAULT_CHANNELS: Readonly<Record<AppLocale, readonly InboxChannelViewMode
     { id: 'case-desk', label: 'case-desk', topic: 'Active cases and field notes' },
     { id: 'forensics', label: 'forensics', topic: 'Digital and physical evidence reviews' },
     { id: 'closed-work', label: 'closed-work', topic: 'Completed team work' },
+  ],
+  'pt-BR': [
+    { id: 'case-desk', label: 'mesa-do-caso', topic: 'Casos ativos e anotações de campo' },
+    { id: 'forensics', label: 'forensics', topic: 'Análises de evidências digitais e físicas' },
+    { id: 'closed-work', label: 'encerrados', topic: 'Trabalhos da equipe concluídos' },
   ],
 }
 

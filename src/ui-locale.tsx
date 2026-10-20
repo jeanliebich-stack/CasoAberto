@@ -1,11 +1,12 @@
 import { createContext, type ReactNode, useContext, useLayoutEffect } from 'react'
 
-export type AppLocale = 'tr' | 'en'
+export type AppLocale = 'tr' | 'en' | 'pt-BR'
 
 export const DEFAULT_APP_LOCALE: AppLocale = 'en'
 
 function supportedLocale(value: string | undefined): AppLocale | undefined {
   const base = value?.trim().split(/[-_]/u, 1)[0]?.toLowerCase()
+  if (base === 'pt') return 'pt-BR'
   return base === 'tr' || base === 'en' ? base : undefined
 }
 
@@ -72,6 +73,7 @@ export function useUiCopy<T>(catalog: Readonly<Record<AppLocale, T>>): T {
   return catalog[useUiLocale()]
 }
 
-export function localeTag(locale: AppLocale): 'tr-TR' | 'en-US' {
-  return locale === 'tr' ? 'tr-TR' : 'en-US'
+export function localeTag(locale: AppLocale): 'tr-TR' | 'en-US' | 'pt-BR' {
+  if (locale === 'tr') return 'tr-TR'
+  return locale === 'pt-BR' ? 'pt-BR' : 'en-US'
 }

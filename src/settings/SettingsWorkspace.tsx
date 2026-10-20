@@ -138,6 +138,7 @@ const COPY = {
     interfaceLanguageHelp: 'Menüler, ayarlar ve sistem mesajları bu dilde gösterilir.',
     turkish: 'Türkçe',
     english: 'English',
+    portuguese: 'Português (Brasil)',
     caseLanguage: 'Aktif vaka dili',
     caseLanguageHelp: 'Dil değişimi ilerlemeyi veya vaka saatini sıfırlamaz.',
     noActiveCase: 'Aktif bir vaka yok.',
@@ -220,6 +221,7 @@ const COPY = {
     interfaceLanguageHelp: 'Menus, settings, and system messages use this language.',
     turkish: 'Türkçe',
     english: 'English',
+    portuguese: 'Português (Brasil)',
     caseLanguage: 'Active case language',
     caseLanguageHelp: 'Changing language does not reset progress or the case clock.',
     noActiveCase: 'There is no active case.',
@@ -276,6 +278,89 @@ const COPY = {
     minutesLeft: 'min left',
     expired: 'Time expired',
     navigation: 'Settings sections',
+  },
+  'pt-BR': {
+    title: 'Configurações',
+    subtitle: 'Gerencie a sua mesa de detetive e a biblioteca de casos.',
+    profile: 'Perfil',
+    profileDescription: 'O progresso e a disposição da mesa neste perfil ficam separados dos outros perfis.',
+    activeProfile: 'Perfil ativo',
+    switchProfile: 'Trocar de perfil',
+    rename: 'Renomear',
+    delete: 'Remover perfil',
+    deleteWarning: 'O perfil e a disposição da mesa serão removidos deste navegador. Arquivos de save antigos do host não são apagados automaticamente; os casos instalados não são afetados.',
+    deleteConfirm: 'Remover agora',
+    cancel: 'Cancelar',
+    saveName: 'Salvar nome',
+    createProfile: 'Criar novo perfil',
+    profileName: 'Nome do perfil',
+    nameRequired: 'Digite um nome para o perfil.',
+    profileLanguage: 'Idioma inicial',
+    create: 'Criar perfil',
+    onlyProfile: 'Pelo menos um perfil deve permanecer.',
+    language: 'Idioma',
+    languageDescription: 'Você pode escolher separadamente o idioma do aplicativo e o idioma de apresentação dos casos.',
+    interfaceLanguage: 'Idioma do aplicativo',
+    interfaceLanguageHelp: 'Menus, configurações e mensagens do sistema usam este idioma.',
+    turkish: 'Türkçe',
+    english: 'English',
+    portuguese: 'Português (Brasil)',
+    caseLanguage: 'Idioma do caso ativo',
+    caseLanguageHelp: 'Mudar o idioma não reinicia o progresso nem o relógio do caso.',
+    noActiveCase: 'Não há nenhum caso ativo.',
+    cases: 'Biblioteca de Casos',
+    casesDescription: 'Abra casos instalados ou adicione um novo caso a partir de um link confiável.',
+    installedCases: 'Casos instalados',
+    casesCount: 'casos',
+    openCase: 'Abrir caso',
+    currentCase: 'Caso ativo',
+    importCase: 'Adicionar um caso',
+    github: 'Pasta do GitHub',
+    yaml: 'YAML direto',
+    githubHelp: 'A URL de um repositório ou pasta que contenha case.yml e as pastas assets, i18n e tests.',
+    yamlHelp: 'Uma URL HTTPS de case.yml, sem recursos.',
+    sourceUrl: 'URL do caso',
+    githubPlaceholder: 'https://github.com/usuario/repositorio/tree/main/cases/exemplo',
+    yamlPlaceholder: 'https://exemplo.com/case.yml',
+    importAction: 'Verificar e adicionar',
+    invalidHttps: 'Digite uma URL HTTPS válida e segura.',
+    invalidGithub: 'Use uma URL github.com para importar do GitHub.',
+    importFailed: 'Não foi possível adicionar o caso. Verifique a URL e tente novamente.',
+    technicalDetails: 'Detalhes técnicos',
+    importSuccess: 'O caso foi adicionado à sua biblioteca.',
+    connecting: 'Localizando o caso',
+    downloading: 'Baixando arquivos',
+    checking: 'Verificando a compatibilidade',
+    installing: 'Adicionando à biblioteca',
+    storage: 'Armazenamento',
+    storageDescription: 'Veja a situação do salvamento e reinicie somente o caso ativo.',
+    saveStatus: 'Salvamento automático',
+    deadline: 'Próximo prazo',
+    installedContent: 'Conteúdo instalado',
+    profileData: 'Dados do perfil',
+    profileDataHelp: 'Os saves dos casos, a disposição da mesa e as conexões do quadro do caso pertencem a este perfil.',
+    restartCase: 'Reiniciar caso ativo',
+    restartHelp: 'Observações, ligações, o tempo decorrido e a disposição da mesa deste caso serão apagados.',
+    restartQuestion: 'Deseja reiniciar este caso?',
+    restartConfirm: 'Apagar e reiniciar',
+    noRestart: 'Não há nenhum caso ativo para reiniciar.',
+    saved: 'Salvo',
+    saving: 'Salvando',
+    saveError: 'Problema ao salvar',
+    idle: 'Pronto',
+    notStarted: 'Não iniciado',
+    active: 'Investigação em andamento',
+    ended: 'Caso concluído',
+    verified: 'Verificado',
+    compatible: 'Compatível',
+    unverified: 'Sem testes do autor',
+    failed: 'Requer atenção',
+    builtIn: 'Incluído no opencase',
+    githubSource: 'GitHub',
+    yamlSource: 'URL do YAML',
+    minutesLeft: 'min restantes',
+    expired: 'Tempo esgotado',
+    navigation: 'Seções das configurações',
   },
 } as const
 
@@ -605,6 +690,7 @@ export function SettingsWorkspace({
                     <select value={newProfileLocale} onChange={(event) => setNewProfileLocale(event.currentTarget.value as SettingsLocale)}>
                       <option value="tr">{labels.turkish}</option>
                       <option value="en">{labels.english}</option>
+                      <option value="pt-BR">{labels.portuguese}</option>
                     </select>
                   </label>
                   <button type="submit" className="settings-primary-action" disabled={busy}>{labels.create}</button>
@@ -624,7 +710,7 @@ export function SettingsWorkspace({
               </div>
               <fieldset className="settings-language-options">
                 <legend className="settings-sr-only">{labels.interfaceLanguage}</legend>
-                {(['tr', 'en'] as const).map((candidate) => (
+                {(['tr', 'en', 'pt-BR'] as const).map((candidate) => (
                   <label key={candidate} className={locale === candidate ? 'is-selected' : undefined}>
                     <input
                       type="radio"
@@ -634,8 +720,8 @@ export function SettingsWorkspace({
                       disabled={busy}
                       onChange={() => onLanguageChange(candidate)}
                     />
-                    <span aria-hidden="true">{candidate === 'tr' ? 'TR' : 'EN'}</span>
-                    <strong>{candidate === 'tr' ? labels.turkish : labels.english}</strong>
+                    <span aria-hidden="true">{candidate === 'tr' ? 'TR' : candidate === 'pt-BR' ? 'PT' : 'EN'}</span>
+                    <strong>{candidate === 'tr' ? labels.turkish : candidate === 'pt-BR' ? labels.portuguese : labels.english}</strong>
                     <i aria-hidden="true" />
                   </label>
                 ))}

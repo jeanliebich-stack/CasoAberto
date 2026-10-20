@@ -1,0 +1,9 @@
+schema: case-i18n/v0.1
+case: {id: examples.diverted-invoice, version: 0.1.0}
+locale: pt-BR
+messages:
+  case.title: "A Fatura Desviada"
+  case.synopsis: "Uma fatura rotineira de fornecedor vai parar no beneficiário errado depois de um e-mail urgente de alteração de roteamento, e a janela de estorno do banco está se fechando."
+  opening.call: "Liberei o pagamento da fatura 8841, e então o fornecedor ligou dizendo que os dados bancários dele nunca mudaram. O banco ainda pode analisar um estorno por oito minutos. Você consegue verificar o e-mail, rastrear a mudança de roteamento e dizer a eles qual transferência deve ser interrompida?"
+  outcomes.recalled.title: "Transferência Estornada"
+  outcomes.settled.title: "Janela de Estorno Perdida"

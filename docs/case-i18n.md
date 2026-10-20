@@ -8,6 +8,7 @@ my-case/
   assets/
   i18n/
     en.yml
+    pt-BR.yml
     tr.yml
   tests/
 ```
@@ -192,7 +193,7 @@ Only authored catalogs receive generated locale manifests. A requested
 `en-GB` locale can therefore select the authored `en` manifest, but the build
 does not invent an `en-GB` file.
 
-The local desktop requests the active player's preferred locale (`tr` or `en`)
+The local desktop requests the active player's preferred locale (`tr`, `en` or `pt-BR`)
 and applies the same fallback order. That preference also selects application
 interface copy, but interface labels do not belong in the case catalog. A case
 may support only one of those languages; in that situation its authored copy

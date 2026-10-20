@@ -127,7 +127,7 @@ export interface DesktopShellProps {
   onDismissNotification?: () => void
   startLabel?: string
   /** Application-owned chrome locale. Case content stays in the case catalog. */
-  locale?: 'tr' | 'en'
+  locale?: 'tr' | 'en' | 'pt-BR'
   layoutPersistence?: DesktopLayoutPersistence
   onLayoutChange?: (layout: DesktopLayoutSnapshot) => void
   onLayoutPersistenceError?: (error: unknown) => void
